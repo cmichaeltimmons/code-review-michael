@@ -249,7 +249,7 @@
                     this.setState({
                         personList,
                         visiblePersonList: personList
-                    }));
+                    })).catch(error => console.log(error.message));
             },
 
             _shuffleList() {
