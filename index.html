@@ -129,6 +129,9 @@
         // headshot URLs are scheme relative //
         // prepend http: to prevent invalid schemes like file:// or uri://
         const getImageUrl = (person) => {
+            if(!person.headshot.url){
+              return 'https://i5.walmartimages.com/asr/f752abb3-1b49-4f99-b68a-7c4d77b45b40_1.39d6c524f6033c7c58bd073db1b99786.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF'
+            }
             return `http:${person.headshot.url}`;
         };
 
