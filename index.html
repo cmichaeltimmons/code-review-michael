@@ -101,19 +101,13 @@
          *        ...
          *    ]
          */
-        function getPersonList() {
-            return new Promise((resolve, reject) => {
-                fetch('https://willowtreeapps.com/api/v1.0/profiles')
-                .then(response => {
-                    if (response.status !== 200) {
-                        reject(new Error("Error!"));
-                    }
-
-                    response.json().then(imageList => {
-                        resolve(imageList);
-                    });
-                });
-            });
+        async function getPersonList() {
+          const url = 'https://willowtreeapps.com/api/v1.0/profiles'
+          const response = await fetch(url)
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return await response.json()
         }
 
 
