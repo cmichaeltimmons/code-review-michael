@@ -161,7 +161,8 @@
          */
         function filterByName(searchForName, personList) {
             return personList.filter((person) => {
-                return person.firstName === searchForName || person.lastName === searchForName;
+                return person.firstName.toUpperCase().includes(searchForName.toUpperCase())
+                 || person.lastName.toUpperCase().includes(searchForName.toUpperCase())
             });
         }
 
