@@ -1,6 +1,6 @@
 # Code Analysis
 
-See comments in `index.html` for instructions.
+You cann see my suggested code review at https://github.com/cmichaeltimmons/code-review-michael/pull/1
 
 ## Run
 
